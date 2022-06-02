@@ -44,14 +44,6 @@ Since the PHP-fpm handler is required to use WP Optimization Suite, you may need
 These are configuration steps:
 
 1. Ensure the PHP-fpm package for the current PHP version is installed or install it.
-   * Manual installation
-
-     Run the following command:
-
-     ```
-     yum -y install ea-phpXY-php-fpm
-     ```
-     Where XY - is required PHP version, for instance `ea-php74-php-fpm`
 
     * Via MultiPHP Manager
 
