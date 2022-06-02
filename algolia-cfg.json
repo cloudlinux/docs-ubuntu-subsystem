@@ -1,7 +1,7 @@
 {
-  "index_name": "cloudlinuxos",
+  "index_name": "docs-ubuntu-subsystem",
   "start_urls": [
-    "http://docs.cloudlinux.com"
+    "https://docs.ubuntu-subsystem.cloudlinux.com/"
   ],
   "stop_urls": [
     "/#",
