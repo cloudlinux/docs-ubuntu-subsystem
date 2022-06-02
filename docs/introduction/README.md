@@ -35,5 +35,4 @@ We support Ubuntu™ 20.04 LTS.
 |[cPanel from v.102](https://blog.cpanel.com/ubuntu-lts-and-full-cpanel-support/) | Yes |
 |Plesk| No |
 |DirectAdmin| No |
-|Other panels| Yes |
 |No control panel| Yes |
