@@ -12,7 +12,7 @@ const slugifyLinks = (s) => {
 // set your global autometa options
 const autoMetaOptions = {
   site: {
-    name   : 'CloudLinux subsystem on Ubuntu Documentation',
+    name   : 'CloudLinux subsystem on Ubuntu™ Documentation',
     // twitter: 'cl_docs',
   },
   canonical_base: 'https://docs.ubuntu-subsystem.cloudlinux.com/',
@@ -75,7 +75,7 @@ module.exports = {
     "/": {
       lang: "en-US", // this will be set as the lang attribute on <html>
       title: "Documentation",
-      description: "CloudLinux subsystem on Ubuntu Documentation"
+      description: "CloudLinux subsystem on Ubuntu™ Documentation"
     },
 //    "/ru/": {
 //      lang: "ru",
