@@ -156,7 +156,7 @@ module.exports = {
         },
         algolia: {
           apiKey: "e6b9d79daf71aa98e2e2a51d4556f9d4",
-          indexName: "cloudlinuxos",
+          indexName: "docs-ubuntu-subsystem",
           appId: "0TCNL6CGX8"
         },
 
