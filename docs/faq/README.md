@@ -5,7 +5,6 @@
 CloudLinux subsystem on Ubuntu is a scope of deb-packages which allows using CloudLinux features on Ubuntu OS.
 The main goal of this subsystem is to allow operating the already existed CloudLinux functionality on another OS.
 
-
 ### How to install the CloudLinux subsystem on Ubuntu?
 
 See [Installation](/installation/).
@@ -13,7 +12,6 @@ See [Installation](/installation/).
 ### Is the CloudLinux subsystem on Ubuntu paid/unpaid?
 
 During the beta period it is free.
-
 
 ### Can I get the ISO for the CloudLinux subsystem on Ubuntu?
 
@@ -37,7 +35,7 @@ You cannot use Docker with the CloudLinux subsystem on Ubuntu in the current ver
 
 ### Is control panel integration functionality available in the current release?
 
-It is not available in the current version.
+Yes, it is available.
 
 ### How to set up a PHP-fpm handler for the domain?
 
