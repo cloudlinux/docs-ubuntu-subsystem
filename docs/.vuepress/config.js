@@ -12,10 +12,10 @@ const slugifyLinks = (s) => {
 // set your global autometa options
 const autoMetaOptions = {
   site: {
-    name   : 'Cloudlinux OS Documentation',
+    name   : 'CloudLinux subsystem on Ubuntu Documentation',
     // twitter: 'cl_docs',
   },
-  canonical_base: 'https://docs.cloudlinux.com/',
+  canonical_base: 'https://docs.ubuntu-subsystem.cloudlinux.com/',
 };
 
 module.exports = {
@@ -75,7 +75,7 @@ module.exports = {
     "/": {
       lang: "en-US", // this will be set as the lang attribute on <html>
       title: "Documentation",
-      description: "CloudLinux OS Shared Documentation"
+      description: "CloudLinux subsystem on Ubuntu Documentation"
     },
 //    "/ru/": {
 //      lang: "ru",
@@ -166,7 +166,11 @@ module.exports = {
             collapsable: false,
             children: [
               "/introduction/",
-              "/wpos-plugin/"
+              "/faq/",
+              "/installation/",
+              "/features/",
+              "/uninstalling/",
+              "/troubleshooting/"
             ]
           }
         ]
