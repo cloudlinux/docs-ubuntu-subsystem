@@ -11,6 +11,27 @@ For the first beta release we were focusing on the major CloudLinux features for
 
 We support Ubuntu 20.04 LTS.
 
+## CloudLinux OS editions comparison
+
+|**Features**|**CloudLinux OS Solo**|**CloudLinux OS Shared**|**CloudLinux OS Shared Pro**|**<font color="#2c98f0">CloudLinux Subsystem For Ubuntu</font>**|
+|:-:|:-:|:-:|:-:|:-:|
+|Maximum amount of hosting accounts|1|unlimited|unlimited|**<font color="#2c98f0">unlimited</font>**|
+|Limits (CloudLinux Manager)|No|**Yes**|**Yes**|**<font color="#2c98f0">Yes</font>**|
+|Cage FS|No|**Yes**|**Yes**|**<font color="#2c98f0">Yes</font>**|
+|MySQL Governor|No|**Yes**|**Yes**|**<font color="#2c98f0">No</font>**|
+|Selectors (PHP, Python, Node.js, Ruby)|No|**Yes**|**Yes**|**<font color="#2c98f0">PHP Selector only</font>**|
+|HardenedPHP|No|**Yes**|**Yes**|**<font color="#2c98f0">Yes</font>**|
+|Apache mod_lsapi PRO|No|**Yes**|**Yes**|**<font color="#2c98f0">No</font>**|
+|SecureLinks|No|**Yes**|**Yes**|**<font color="#2c98f0">Yes</font>**|
+|Website monitoring tool|**Yes**|**Yes**|**Yes**|**<font color="#2c98f0">No</font>**|
+|Website monitoring alerts|**Yes**|No|No|**<font color="#2c98f0">No</font>**|
+|Slow Site analyzer|**Yes**|**Yes**|**Yes**|**<font color="#2c98f0">No</font>**|
+|PHP X-Ray|**Yes**|No|**Yes**|**<font color="#2c98f0">No</font>**|
+|Centralized Monitoring|No|No|**Yes**|**<font color="#2c98f0">No</font>**|
+|AccelerateWP|**Yes**|No|**Yes**|**<font color="#2c98f0">No</font>**|
+|Support 24/7|**Yes**|**Yes**|**Yes**|**<font color="#2c98f0">Yes</font>**|
+|Priority support|No|No|**Yes**|**<font color="#2c98f0">No</font>**|
+
 ## Supported control panels
 
 | **Panel** | **Supported** |
