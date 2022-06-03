@@ -11,27 +11,6 @@ For the first beta release we were focusing on the major CloudLinux features for
 
 We support Ubuntu 20.04 LTS.
 
-## CloudLinux OS editions comparison
-
-|**Features**|**CloudLinux OS Solo**|**CloudLinux OS Shared**|**CloudLinux OS Shared Pro**|**CloudLinux Subsystem For Ubuntu**|
-|:-:|:-:|:-:|:-:|:-:|
-|Maximum amount of hosting accounts|1|unlimited|unlimited|unlimited|
-|Limits (CloudLinux Manager)|No|**Yes**|**Yes**|**Yes**|
-|Cage FS|No|**Yes**|**Yes**|**Yes**|
-|MySQL Governor|No|**Yes**|**Yes**|No|
-|Selectors (PHP, Python, Node.js, Ruby)|No|**Yes**|**Yes**|PHP Selector only|
-|HardenedPHP|No|**Yes**|**Yes**|**Yes**|
-|Apache mod_lsapi PRO|No|**Yes**|**Yes**|No|
-|SecureLinks|No|**Yes**|**Yes**|**Yes**|
-|Website monitoring tool|**Yes**|**Yes**|**Yes**|No|
-|Website monitoring alerts|**Yes**|No|No|No|
-|Slow Site analyzer|**Yes**|**Yes**|**Yes**|No|
-|PHP X-Ray|**Yes**|No|**Yes**|No|
-|Centralized Monitoring|No|No|**Yes**|No|
-|AccelerateWP|**Yes**|No|**Yes**|No|
-|Support 24/7|**Yes**|**Yes**|**Yes**|**Yes**|
-|Priority support|No|No|**Yes**|No|
-
 ## Supported control panels
 
 | **Panel** | **Supported** |
