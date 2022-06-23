@@ -17,7 +17,7 @@ To install the CloudLinux subsystem, run the following command:
 
 No registration required! You can start working right after the installation.
 
-### Ubuntu2Cloudlinux explained
+## Ubuntu2Cloudlinux explained
 
 The `ubuntu2cloudlinux.py` script gives an opportunity to install CloudLinux Subsystem For Ubuntu. It is much more simplier script than the CLdeploy script for CentOS and AlmaLinux. For example, it doesn't replace the linux kernel, only adds a dynamic module to it. Here is a list of actions done by the `ubuntu2cloudlinux`:
 
@@ -28,17 +28,3 @@ The `ubuntu2cloudlinux.py` script gives an opportunity to install CloudLinux Sub
 * Installs CloudLinux Manager (currently works with cPanel on Ubuntu).
 * Installs the mod_hostinglimits Apache module.
 * Asks you to manually reboot the system to load a new kernel module.
-
-## Deleting the CloudLinux Subsystem For Ubuntu
-
-You can uninstall CloudLinux Subsystem For Ubuntu by running the following command:
-
-```
-./ubuntu2cloudlinux.py --uninstall
-```
-
-In that case the script will:
-
-* Remove the CloudLinux OS components which are installed on your system, choosing from the following list: lve, kmodlve-dkms, lve-utils, lve-stats, lvemanager, cagefs, alt-python, alt-php, db-governor.
-* Remove configs for CloudLinux repositories for Ubuntu.
-* Ask you to check for remaining packages from CloudLinux and manually reboot your system.
