@@ -1,7 +1,7 @@
 # Introduction
 
 :::warning Disclaimer
-* All mentioned in this article trademarks, logos, and copyrights are property of their respective owners and are only mentioned for informative purposes.
+* All mentioned in this documentation trademarks, logos, and copyrights are property of their respective owners and are only mentioned for informative purposes.
 * [Ubuntu](https://ubuntu.com/) is a registered trademark of Canonical Ltd.
 :::
 
