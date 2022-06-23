@@ -1,8 +1,15 @@
 # Uninstalling
 
-To uninstall, run the following command:
+### Deleting the CloudLinux Subsystem For Ubuntu
+
+You can uninstall CloudLinux Subsystem For Ubuntu by running the following command:
 
 ```
-#  apt-get remove --purge alt-python27-cllib alt-python37 app-version-detector cloudlinux-linksafe kmodlve-dkms lve lvemanager lve-stats lve-utils lve-wrappers pam-lve ea-apache24-mod-hostinglimits mod-hostinglimits
-# reboot
+./ubuntu2cloudlinux.py --uninstall
 ```
+
+In that case the script will:
+
+* Remove the CloudLinux OS components which are installed on your system, choosing from the following list: lve, kmodlve-dkms, lve-utils, lve-stats, lvemanager, cagefs, alt-python, alt-php, db-governor.
+* Remove configs for CloudLinux repositories for Ubuntu.
+* Ask you to check for remaining packages from CloudLinux and manually reboot your system.
