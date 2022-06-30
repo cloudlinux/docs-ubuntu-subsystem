@@ -25,6 +25,97 @@ The documentation is available [here](https://docs.cloudlinux.com/limits/#inodes
 
 The documentation is available [here](https://docs.cloudlinux.com/limits/#reseller-limits).
 
+## MySQL Governor
+
+MySQL Governor is software to monitor and restrict MySQL usage in a shared hosting environment. The monitoring is done via resource usage statistics per each MySQL thread.
+
+MySQL Governor can also kill off slow SELECT queries.
+
+MySQL Governor has multiple modes of operations, depending on the configuration. It can work in monitor-only mode, or it can use different throttling scenarios.
+
+MySQL Governor allows restricting customers who use too many resources. It supports following limits:
+
+| | | |
+|-|-|-|
+|CPU|%|CPU speed relative to one core. 150% would mean one and a half cores|
+|READ|bytes|bytes read. Cached reads are not counted, only those that were actually read from disk will be counted|
+|WRITE|bytes|bytes written. Cached writes are not counted, only once data is written to disk, it is counted|
+
+You can set different limits for different periods: current, short, med, long. By default those periods are defined as 1 second, 5 seconds, 1 minute and 5 minutes. They can be re-defined using the [configuration file](https://docs.cloudlinux.com/cloudlinux_os_components/#configuration-and-operation). The idea is to use larger acceptable values for shorter periods. Like you could allow a customer to use two cores (200%) for one second, but only 1 core (on average) for 1 minute, and only 70% within 5 minutes. That would make sure that customer can burst for short periods of time.
+
+When a customer is restricted, the customer will be placed into special LVE with ID 3. All restricted customers will be placed into that LVE, and you can control the amount of resources available to restricted customers. Restricted customers will also be limited to only 30 concurrent connections. This is done so they wouldn't use up all the MySQL connections to the server.
+
+### Installation 
+
+:::warning Attention!
+MySQL Governor on Ubuntu supports the following only:
+* cl-MySQL80 on non-panel system
+* cl-MySQL80 on cPanel 
+* cl-MariaDB103 on  non-panel system
+:::
+ 
+1. Install MySQL Governor
+```
+apt  install governor-mysql
+```
+2. To use MySQL Governor with
+
+    * cl-MariaDB103 
+    ```
+    /usr/share/lve/dbgovernor/mysqlgovernor.py --mysql-version=mariadb103
+    ```
+    * cl-MySQL80 
+    ```
+    /usr/share/lve/dbgovernor/mysqlgovernor.py --mysql-version=mysql80
+    ```
+3. Backup your databases.
+4. Run the cl-MySQL/cl-MariaDB installation.
+```
+/usr/share/lve/dbgovernor/mysqlgovernor.py --install --yes
+```
+In case of installing on cPanel + Ubuntu server, set the following parameter:
+
+![](/images/Param.png)
+5. After installation, check that the database server is working properly. If you have any problems, use [Support Portal]().
+6. Configure user mapping to the database. The mapping format is described in the [following section](https://docs.cloudlinux.com/cloudlinux_os_components/#mapping-a-user-to-a-database).
+
+In case a non-panel system the `/etc/container/dbuser-map` should be created and updated with new users by admin.
+
+The format is as follows:
+
+```
+[dbuser_name1] [account_name1] [UID1]
+...
+[dbuser_nameN] [account_nameN] [UIDN]
+```
+
+The control panel should automatically generate such mapping and write it to the `/etc/container/dbuser-map`. Usually, it is enough to write a hook when adding, deleting or renaming a database for a user. The control panel should implement such a mechanism for MySQL Governor to operate properly. MySQL Governor automatically applies changes from the dbuser-map file every five minutes.
+
+7. MySQL Governor configuration can be found in the following [section](https://docs.cloudlinux.com/cloudlinux_os_components/#configuration-3).
+8. MySQL Governor CLI tools description can be found in the following [section](https://docs.cloudlinux.com/command-line_tools/#mysql-governor).
+9. Having configured the mapping use `dbtop` to see the current user load on the database (you'd need to make some database queries).
+```
+dbtop
+```
+10. If the load appears in the dbtop output, then you have successfully configured MySQL Governor.
+
+### How To upgrade database server
+
+You can find the instructions in [this documentation](https://docs.cloudlinux.com/cloudlinux_os_components/#upgrading-database-server).
+
+### Uninstalling
+
+To remove MySQL Governor, run the following command:
+```
+$ /usr/share/lve/dbgovernor/mysqlgovernor.py --delete
+```
+
+The script will install the original MySQL server, and remove MySQL Governor.
+
+### Configuration and operation
+
+You can find the instructions in [this documentation](https://docs.cloudlinux.com/cloudlinux_os_components/#configuration-and-operation).
+
 ## Administrator WEB interface (CloudLinux Manager)
 
 The documentation is available [here](https://docs.cloudlinux.com/lve_manager/#cloudlinux-manager).
