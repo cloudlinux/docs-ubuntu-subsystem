@@ -274,11 +274,11 @@ The documentation is available [here](https://docs.cloudlinux.com/cloudlinux_os_
 
 ### General requirements
 
-General requirements available [here](https://docs.cloudlinux.com/cloudlinux_os_components/#general-information-and-requirements-9).
+General requirements are available [here](https://docs.cloudlinux.com/cloudlinux_os_components/#general-information-and-requirements-9).
 
 ### Installation 
 
-Installation on cPanel servers with EasyApache 4
+Installation on cPanel servers with EasyApache 4:
 
 ```
 $ apt install liblsapi liblsapi-dev 
@@ -292,7 +292,7 @@ $ service httpd restart
 
 ### Troubleshooting
 
-In case the site responds with the error: 503 Service unavailable error  
+In case the site responds with the error: 503 Service unavailable.
 
 1. Be sure that /opt has drwxr-xr-x permissions. It can be fixed with the following command:
 
@@ -322,7 +322,7 @@ $ service httpd restart
 
 ### Uninstall
 
-Uninstall procedure for cPanel servers with EasyApache 4
+Uninstall procedure for cPanel servers with EasyApache 4:
 
 ```
 $ /usr/bin/switch_mod_lsapi --uninstall
