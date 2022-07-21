@@ -283,12 +283,22 @@ Installation on cPanel servers with EasyApache 4:
 ```
 $ apt install liblsapi liblsapi-dev 
 $ apt install ea-apache24-mod-lsapi
-```
-
-```
 $ /usr/bin/switch_mod_lsapi --setup
 $ service httpd restart
 ```
+
+Installation on servers with no panel:
+
+```
+$ apt install liblsapi liblsapi-dev 
+$ apt install mod-lsapi
+$ /usr/bin/switch_mod_lsapi --setup
+$ service apache2 restart
+```
+
+### Configuration
+
+Configuration instructions are available [here](https://docs.cloudlinux.com/cloudlinux_os_components/#configuration-4).
 
 ### Troubleshooting
 
@@ -300,7 +310,7 @@ In case the site responds with the error: 503 Service unavailable.
 $ chmod 755 /opt 
 ```
 
-2. Change the default folder for mod_lsapi socket
+2. Change the default folder for mod_lsapi socket:
 
 ```
 $ mkdir /var/mod_lsapi
@@ -327,4 +337,11 @@ Uninstall procedure for cPanel servers with EasyApache 4:
 ```
 $ /usr/bin/switch_mod_lsapi --uninstall
 $ apt remove liblsapi liblsapi-dev ea-apache24-mod-lsapi
+```
+
+Uninstall procedure for servers with no panel:
+
+```
+$ /usr/bin/switch_mod_lsapi --uninstall
+$ apt remove liblsapi liblsapi-dev mod-lsapi
 ```
