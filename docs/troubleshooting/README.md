@@ -42,10 +42,4 @@ Such behavior will be fixed in the upcoming versions.
 2. LVE statistics works only with SQLite, other databases (MySQL, postgreSQL) will be available in the next releases.
 3. `alt-php*-zts` are not available yet.
 4. The `tmpreaper package` is using instead of `tmpwatch`.
-
-
-
-
-
-
-
+5. PNG format for LVE Charts does not work correctly on CloudLinux subsystem on Ubuntu (lvechart utility may produce broken images).
