@@ -22,7 +22,7 @@ We support Ubuntu 20.04 LTS.
 |Cage FS|**Yes**|**Yes**|**Yes**|**Yes**|**<font color="#2c98f0">Yes</font>**|
 |MySQL Governor|No|No|**Yes**|**Yes**|**<font color="#2c98f0">No</font>**|
 |PHP Selector|**Yes**|**Yes**|**Yes**|**Yes**|**<font color="#2c98f0">Yes</font>**|
-|Other Selectors (Python, Node.js, Ruby)|No|No|**Yes****|**Yes****|**<font color="#2c98f0">No</font>**|
+|Other Selectors (Python, Node.js, Ruby)|No|**Yes****|**Yes****|**Yes****|**<font color="#2c98f0">No</font>**|
 |HardenedPHP|**Yes**|**Yes**|**Yes**|**Yes**|**<font color="#2c98f0">Yes</font>**|
 |Apache mod_lsapi PRO|**Yes**|**Yes**|**Yes**|**Yes**|**<font color="#2c98f0">No</font>**|
 |SecureLinks|No|**Yes**|**Yes**|**Yes**|**<font color="#2c98f0">Yes</font>**|
