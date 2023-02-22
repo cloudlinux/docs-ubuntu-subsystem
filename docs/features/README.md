@@ -29,9 +29,11 @@ The documentation is available [here](https://docs.cloudlinux.com/limits/#resell
 
 MySQL Governor is software to monitor and restrict MySQL usage in a shared hosting environment. The monitoring is done via resource usage statistics per each MySQL thread.
 
-MySQL Governor can also kill off slow SELECT queries.
+MySQL Governor has two active modes of operations:
+* **off** - In this mode MySQL Governor will not throttle customer's queries, instead it will let you monitor the MySQL usage.
+* **abusers** - In this mode, once user goes over the limits specified in the MySQL Governor, all customer's queries will execute inside that user's LVE.
 
-MySQL Governor has multiple modes of operations, depending on the configuration. It can work in monitor-only mode, or it can use different throttling scenarios.
+More details of the governor operation modes are described in the [Modes of operation section](https://docs.cloudlinux.com/cloudlinux_os_components/#modes-of-operation)
 
 MySQL Governor allows restricting customers who use too many resources. It supports following limits:
 
@@ -43,7 +45,7 @@ MySQL Governor allows restricting customers who use too many resources. It suppo
 
 You can set different limits for different periods: current, short, med, long. By default those periods are defined as 1 second, 5 seconds, 1 minute and 5 minutes. They can be re-defined using the [configuration file](https://docs.cloudlinux.com/cloudlinux_os_components/#configuration-and-operation). The idea is to use larger acceptable values for shorter periods. Like you could allow a customer to use two cores (200%) for one second, but only 1 core (on average) for 1 minute, and only 70% within 5 minutes. That would make sure that customer can burst for short periods of time.
 
-When a customer is restricted, the customer will be placed into special LVE with ID 3. All restricted customers will be placed into that LVE, and you can control the amount of resources available to restricted customers. Restricted customers will also be limited to only 30 concurrent connections. This is done so they wouldn't use up all the MySQL connections to the server.
+Customers will also be limited to a finite number of concurrent connections, this number is 30 by default and can be changed. This is done so they wouldn't use up all the MySQL connections to the server. MySQL Governor can also kill off slow SELECT queries.
 
 ### Installation 
 
